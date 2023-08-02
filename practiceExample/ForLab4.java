@@ -13,6 +13,7 @@ public class ForLab4 {
 			else
 				oddNum +=i;
 		}
+		
 		System.out.println("1부터 100까지의 숫자들 중에서");
 		System.out.println("짝수의 합은 "+evenNum+" 이고");
 		System.out.println("홀수의 합은 "+oddNum+" 이다.");
