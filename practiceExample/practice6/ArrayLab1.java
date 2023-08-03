@@ -8,7 +8,7 @@ public class ArrayLab1 {
 			System.out.print(i+" ");
 		
 		for(int i=0; i < ary.length; i++)
-            ary[i] = (i+1)*10;
+			ary[i] = (i+1)*10;
 		
 		System.out.printf("%n첫 번째 : %d%n마지막 : %d%n합 : %d%n"
 							,ary[0],ary[9],(ary[0]+ary[9]));
