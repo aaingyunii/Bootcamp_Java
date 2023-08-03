@@ -1,6 +1,6 @@
-package practiceExample;
+package practiceExample.practice3;
 
-public class ConditionOperLab {
+public class SwitchLab2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -9,16 +9,24 @@ public class ConditionOperLab {
 		int y = 50;
 		int result;
 		
-		if(a==1)
-			result = x+y;
-		else if(a==2)
+		
+		switch(a) {
+		case 1:
+			result=x+y;
+			break;
+		case 2:
 			result = x-y;
-		else if(a==3)
+			break;
+		case 3:
 			result = x*y;
-		else if(a==4)
+			break;
+		case 4:
 			result = x/y;
-		else
+			break;
+		default:
 			result = x%y;
+			break;
+		}
 		System.out.println("출력된 숫자 : "+a);
 		System.out.println("결과값 : "+result);
 	}

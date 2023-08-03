@@ -1,4 +1,4 @@
-package practiceExample;
+package practiceExample.practice3;
 
 public class ForLab1 {
 

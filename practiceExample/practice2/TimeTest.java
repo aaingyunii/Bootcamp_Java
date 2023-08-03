@@ -1,4 +1,4 @@
-package practiceExample;
+package practiceExample.practice2;
 
 public class TimeTest {
 
