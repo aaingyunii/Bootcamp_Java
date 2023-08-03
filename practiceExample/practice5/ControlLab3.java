@@ -9,7 +9,8 @@ public class ControlLab3 {
 			
 			if(X<50) {
 				System.out.printf("%d : 50 미만%n",X);
-				if(X==3 || X == 13 || X == 33 || X ==43)
+//				if(X==3 || X == 13 || X == 33 || X ==43)
+				if(X%10==3)
 					System.out.printf("\t%d : *듀크팀*%n",X);
 			}
 			else if(X>=50 && X<=80) {
