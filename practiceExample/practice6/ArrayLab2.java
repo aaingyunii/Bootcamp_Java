@@ -11,12 +11,12 @@ public class ArrayLab2 {
 			nums[i] = n;
 		}
 		
-		System.out.print("모든 원소의 값 : ");
-		for(int i : nums)
-			System.out.print(i+" ");
-		
-		for(int i=0;i<nums.length;i++)
+		System.out.print("모든 원소의 값 : ");		
+		for(int i=0;i<nums.length;i++) {
+			System.out.print(nums[i]+" ");
 			result +=nums[i];
+		}
+		
 		System.out.println("\n모든 원소의 합 : "+result);
 	}
 }
