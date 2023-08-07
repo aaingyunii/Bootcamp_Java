@@ -8,7 +8,7 @@ class SalaryExpr{
 	SalaryExpr(){
 		this(0);
 	}
-	// 생성자 오버로딩.
+	// 생성자 오버라이딩
 	SalaryExpr(int bonus){
 		this.bonus = bonus;
 	}
