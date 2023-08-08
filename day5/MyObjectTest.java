@@ -1,6 +1,6 @@
 package day5;
 
-class MyObject { // extends Object{
+class MyObject { // extends Object{ -> 자동으로 extends가 완료된 상태, 기본
 	// 생성자를 구현하지 않아도 객체 생성이 되면
 	// 명시적으로 구현되지 않을 뿐 자동으로 default 생성자가 생성된다. 
 }	
