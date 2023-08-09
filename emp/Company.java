@@ -25,7 +25,7 @@ public class Company {
 			/**
 			 * 출력문에서 부서이름 글자 수 차이에 의해 tap 간격이 서로 다르기 때문에
 			 * 딱 맞게 떨어지게 하기 위해 if문을 통해 
-			 * Sales와 Secretary 출력문 간격을 맞춤.
+			 * Sales와 Secretary 출력문 간격을 맞춤.(\t\t , \t)
 			*/
 			if(emp[i].getNumber()==2) 
 				System.out.print(emp[i].getName()+"\t"+emp[i].getDepartment()+"\t\t"
@@ -41,7 +41,8 @@ public class Company {
 			// Sales에만 존재하는 getExtraPay() 메서드 호출
 			// 여기서 Employee 클래스에는 존재하지 않기 때문에
 			// Sales 캐스팅을 통해 해당 메서드에 접근 및 호출.
-			if(emp[i].getNumber()==2)
+			if(emp[i].getNumber()==2) 
+			// intanceof 연산자를 통해서도 Sales 객체를 찾을 수 있다.
 				System.out.print("\t"+((Sales)emp[i]).getExtraPay());
 
 			System.out.println();
