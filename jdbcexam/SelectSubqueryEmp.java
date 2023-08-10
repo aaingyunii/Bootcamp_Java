@@ -13,11 +13,15 @@ public class SelectSubqueryEmp {
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url, user, passwd);
 		Statement stmt = conn.createStatement();
+		
 		Scanner scan = new Scanner(System.in);
 		System.out.print("부서명을 입력하세요 : ");
 		String departmentname = scan.nextLine();
-		ResultSet rs = stmt.executeQuery("SELECT ename, job, sal, deptno  FROM emp "
-				+ "WHERE deptno = (SELECT deptno FROM dept WHERE dname = '" + departmentname + "')");
+		ResultSet rs = stmt.executeQuery("SELECT ename, job, sal, deptno  "
+				+ "FROM emp "
+				+ "WHERE deptno = "
+				+ "(SELECT deptno FROM dept "
+				+ "WHERE dname = '"+ departmentname + "')");
 
 		if (rs.next()) {
 			System.out.printf("%8s%8s%8s%4s\n", "성명", "직무", "급여", "부서");

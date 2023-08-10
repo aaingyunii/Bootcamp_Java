@@ -15,6 +15,7 @@ public class SelectData1 {
 				Statement stmt = conn.createStatement()){
 			ResultSet rs = stmt.executeQuery("select name, score from student");
 			while(rs.next()) {
+// getString() -> 컬럼명 대신 ,select 절에 적힌 컬럼 순서번호 1,2,3,...으로 대신할 수 있다.
 				System.out.println(rs.getString(1)+"학생은 "+rs.getInt(2)+"점 입니다.");
 			}	
 			rs.close();

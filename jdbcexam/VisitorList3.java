@@ -11,6 +11,9 @@ public class VisitorList3 {
 		String user = "jdbctest";
 		String passwd = "jdbctest";
 		String sql = "SELECT id, name, writedate, memo FROM visitor";
+		
+		// 아래와 같이 외부 자원과 연결하는 부분을 try문으로 선언하면
+		// 별도의 close 메서드 없이 자동으로 수행이 끝나면 close 처리가 진행된다.
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);
 				Statement stmt = conn.createStatement();
 				ResultSet rs = stmt.executeQuery(sql);) {

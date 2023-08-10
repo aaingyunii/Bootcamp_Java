@@ -10,6 +10,10 @@ public class VisitorList {
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url,user,passwd);
 		Statement stmt = conn.createStatement();
+		
+		// 프로그램에서 * 보다는 일일이 컬럼명을 입력하는 것을 권장한다.
+		// ==> 읽기 쉽고, 빠르게 불러올 수 있다.
+		// ==> 그럼에도 * 를 사용하는 것 또한 좋다.
 		String sql = "SELECT id, name, writedate, memo FROM visitor";
 		ResultSet rs = stmt.executeQuery(sql);		
 		while(rs.next()) {

@@ -12,13 +12,19 @@ public class InsertData2 {
 		String user = "jdbctest";
 		String passwd = "jdbctest";
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);
-				PreparedStatement pstmt = conn.prepareStatement("insert into student values (?, ?)");
+				
+				// PreparedStatement 사용!
+				// 동적 수행에 유리한 구문!
+				PreparedStatement pstmt = 
+						conn.prepareStatement("insert into student values (?, ?)");
+				
 				Scanner scan = new Scanner(System.in);){
 			while(true) {
 				System.out.print("학생 이름을 입력하세요 : ");
 				String name = scan.nextLine();
 				System.out.print("학생 점수를 입력하세요 : ");
 				int score = Integer.parseInt(scan.nextLine());
+//				int score = scan.nextInt();
 				pstmt.setString(1,  name);
 				pstmt.setInt(2, score);
 				pstmt.executeUpdate();

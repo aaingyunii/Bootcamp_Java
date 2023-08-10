@@ -16,6 +16,7 @@ public class ConnectMySQL {
 		String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
 		String user = "jdbctest";
 		String passwd = "jdbctest";
+		
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);){
 			DatabaseMetaData md = conn.getMetaData();
 			System.out.println("DBMS 서버 명 : "+md.getDatabaseProductName());

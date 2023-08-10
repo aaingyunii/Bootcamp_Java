@@ -12,7 +12,11 @@ public class SelectSalEmp {
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url,user,passwd);
 		Statement stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("SELECT ename, concat(format(sal, 1),'달러') fsal FROM emp ORDER BY sal DESC");
+		
+		ResultSet rs = stmt.executeQuery("SELECT ename, concat(format(sal, 1),'달러') fsal "
+				+ "FROM emp "
+				+ "ORDER BY sal DESC");
+		
 		System.out.printf("%-8s%-8s\n", "성명", "급여");
 		System.out.println("  --------------------------");
 		while (rs.next()) {

@@ -7,12 +7,19 @@ import java.sql.Statement;
 
 public class SelectEmp {
 	public static void main(String[] args) throws Exception {
-		String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
+		String url = "jdbc:mysql://localhost:3306/"
+				+ "edudb?characterEncoding=UTF-8&serverTimezone=UTC";
 		String user = "jdbctest";
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url, user, passwd);
 		Statement stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("select ename, job, format(sal, 0) sal, deptno  from emp");
+		// DB 서버 접속 및 SQL 구문 변수 선언 ==> 전부 동일.
+		
+		// format(sal, 0) sal ==> 1,000 단위마다 ,로 구분
+		ResultSet rs = stmt.executeQuery("select ename, job, format(sal, 0) sal,"
+				+ " deptno  "
+				+ "from emp");
+		
 		System.out.printf("%10s%10s%10s%10s\n", "성명", "직무", "급여", "부서");
 		System.out.println("  -----------------------------------------");
 		while (rs.next()) {

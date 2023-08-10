@@ -12,7 +12,13 @@ public class SelectGroupEmp {
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url, user, passwd);
 		Statement stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("SELECT ifnull(deptno,'미정') deptno, concat(count(*),'명') su FROM emp GROUP BY deptno");
+		
+		ResultSet rs = stmt.executeQuery(
+				"SELECT "
+				+ "ifnull(deptno,'미정') deptno, concat(count(*),'명') su "
+				+ "FROM emp "
+				+ "GROUP BY deptno"
+				);
 		System.out.printf("%8s%12s\n", "부서명", "근무하는 인원");
 		System.out.println("  -------------------------------");
 		while (rs.next()) {
