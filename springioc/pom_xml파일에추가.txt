@@ -1,0 +1,21 @@
+다음 내용을 pom.xml 의 <version> 태그와 <build> 태그 사이에 추가
+
+<dependencies>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+	<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-context</artifactId>
+    	<version>5.3.23</version>
+	</dependency>  
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+	<dependency> 
+		<groupId>org.aspectj</groupId> 
+		<artifactId>aspectjrt</artifactId> 
+		<version>1.9.6</version> 
+	</dependency> 
+	<dependency> 
+		<groupId>org.aspectj</groupId> 
+		<artifactId>aspectjweaver</artifactId> 
+		<version>1.9.6</version> 
+	</dependency>
+ </dependencies>
