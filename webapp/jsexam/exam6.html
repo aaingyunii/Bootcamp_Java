@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    h1 {
+        color : green;
+    }
+</style>
+</head>
+<body>
+<script>
+    var num=window.prompt("숫자를 한 개 입력하세요."); 
+    console.log(num);
+    document.write("<h1>"+ typeof num+"</h1>"); // string
+    document.write("<h1>"+(Number(num)+10)+"</h1>");
+    // 다른 연산자들은 알아서 형변환하여 연산되지만, '+' 는 문자열끼리의 연결도 되어
+    // 원하는 덧셈을 위해서 강제 캐스팅을 해야 한다.
+    
+    document.write("<h1>"+(num-10)+"</h1>");
+    document.write("<h1>"+(num*10)+"</h1>");
+    document.write("<h1>"+(num/10)+"</h1>");
+    document.write("<h1>"+(num%100)+"</h1>");
+</script>
+</body>
+</html>
